@@ -4,7 +4,6 @@ const userSchema = new mongoose.Schema({
      name: {
         type: String,
         required: true,
-        trim: true,
     },
   
     email: {
@@ -26,3 +25,6 @@ const userSchema = new mongoose.Schema({
           ref: 'Shop',   
         }
 })
+
+
+module.exports = mongoose.model('User'  , userSchema);
